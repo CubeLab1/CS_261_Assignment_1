@@ -30,20 +30,6 @@ def min_max(arr: StaticArray) -> tuple[int, int]:
     return min_val, max_val
 
 
-# Example usage
-print("Problem 1")
-if __name__ == "__main__":
-    arr = StaticArray(5)
-    for i, value in enumerate([7, 8, 6, -5, 4]):
-        arr[i] = value
-
-    print(arr)
-    result = min_max(arr)
-    if result:
-        print(f"Min: {result[0]}, Max: {result[1]}")
-    else:
-        print("min_max() not yet implemented")
-
 pass
 
 
@@ -79,16 +65,6 @@ def fizz_buzz(arr: StaticArray) -> StaticArray:
     return new_arr
 
 
-# Example usage
-print("Problem 2")
-if __name__ == "__main__":
-    arr = StaticArray(15)
-    for i, value in enumerate([i for i in range(1, 16)]):
-        arr[i] = value
-
-    result = fizz_buzz(arr)
-    print(result)
-
 pass
 
 
@@ -107,17 +83,6 @@ def reverse(arr: StaticArray) -> None:
         left += 1
         right -= 1
 
-
-# Example usage
-print("Problem 3")
-if __name__ == "__main__":
-    arr = StaticArray(5)
-    for i, value in enumerate([1, 2, 3, 4, 5]):
-        arr[i] = value
-
-    print(arr)
-    reverse(arr)
-    print(arr)
 
 pass
 
@@ -141,19 +106,6 @@ def rotate(arr: StaticArray, steps: int) -> StaticArray:
 
     return new_arr
 
-
-# Example usage
-print("Problem 4")
-if __name__ == "__main__":
-    arr = StaticArray(5)
-    for i, value in enumerate([1, 2, 3, 4, 5]):
-        arr[i] = value
-
-    print(arr)
-    result = rotate(arr, 2)  # Rotating right by 2 steps
-    print(result)
-    result = rotate(arr, -2)  # Rotating left by 2 steps
-    print(result)
 
 pass
 
@@ -180,18 +132,6 @@ def sa_range(start: int, end: int) -> StaticArray:
 
     return arr
 
-
-# Example usage
-print("Problem 5")
-if __name__ == "__main__":
-    result = sa_range(1, 5)
-    print(result)
-    result = sa_range(5, 1)
-    print(result)
-    result = sa_range(-3, 3)
-    print(result)
-    result = sa_range(3, -3)
-    print(result)
 
 pass
 
@@ -224,29 +164,6 @@ def is_sorted(arr: StaticArray) -> int:
         return -1
     return 0
 
-
-# Example usage
-print("Problem 6")
-if __name__ == "__main__":
-    arr1 = StaticArray(5)
-    for i, value in enumerate([1, 2, 3, 4, 5]):
-        arr1[i] = value
-
-    arr2 = StaticArray(5)
-    for i, value in enumerate([5, 4, 3, 2, 1]):
-        arr2[i] = value
-
-    arr3 = StaticArray(5)
-    for i, value in enumerate([1, 3, 2, 4, 5]):
-        arr3[i] = value
-
-    arr4 = StaticArray(1)
-    arr4[0] = 1
-
-    print(is_sorted(arr1))  # Output: 1
-    print(is_sorted(arr2))  # Output: -1
-    print(is_sorted(arr3))  # Output: 0
-    print(is_sorted(arr4))  # Output: 1
 
 pass
 
@@ -284,18 +201,6 @@ def find_mode(arr: StaticArray) -> tuple[object, int]:
 
     return mode, mode_count
 
-
-# Example usage
-print("Problem 7")
-if __name__ == "__main__":
-    arr = StaticArray(10)
-    for i, value in enumerate([1, 2, 2, 3, 3, 3, 4, 4, 4, 4]):
-        arr[i] = value
-
-    print(arr)
-    result = find_mode(arr)
-    print(f"Mode: {result[0]}, Frequency: {result[1]}")  # Output: Mode: 4, Frequency: 4
-
     pass
 
 
@@ -329,24 +234,6 @@ def remove_duplicates(arr: StaticArray) -> StaticArray:
             new_index += 1
 
     return new_arr
-
-
-# Example usage
-print("Problem 8")
-if __name__ == "__main__":
-    arr1 = StaticArray(10)
-    for i, value in enumerate([1, 2, 2, 3, 3, 3, 4, 4, 4, 4]):
-        arr1[i] = value
-
-    arr2 = StaticArray(10)
-    for i, value in enumerate([4, 4, 4, 4, 3, 3, 3, 2, 2, 1]):
-        arr2[i] = value
-
-    result1 = remove_duplicates(arr1)
-    print(result1)  # Output: StaticArray with elements [1, 2, 3, 4]
-
-    result2 = remove_duplicates(arr2)
-    print(result2)  # Output: StaticArray with elements [4, 3, 2, 1]
 
     pass
 
@@ -387,17 +274,6 @@ def count_sort(arr: StaticArray) -> StaticArray:
 
     return output_arr
 
-
-# Example usage
-print("Problem 9")
-if __name__ == "__main__":
-    arr = StaticArray(10)
-    for i, value in enumerate([4, 2, 2, 8, 3, 3, 1, 7, 6, 5]):
-        arr[i] = value
-
-    result = count_sort(arr)
-    print(result)  # Output: StaticArray with elements [8, 7, 6, 5, 4, 3, 3, 2, 2, 1]
-
     pass
 
 
@@ -429,17 +305,6 @@ def sorted_squares(arr: StaticArray) -> StaticArray:
         position -= 1
 
     return result
-
-
-# Example usage
-print("Problem 10")
-if __name__ == "__main__":
-    arr = StaticArray(6)
-    for i, value in enumerate([-7, -3, -1, 4, 8, 12]):
-        arr[i] = value
-
-    result = sorted_squares(arr)
-    print(result)  # Output: StaticArray with elements [1, 9, 16, 49, 64, 144]
 
     pass
 
