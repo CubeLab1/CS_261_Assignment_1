@@ -4,6 +4,7 @@
 # Assignment: 1- Python Review
 # Due Date: 7/09/2024
 # Description: Review
+
 import random
 from static_array import *
 
@@ -453,7 +454,7 @@ if __name__ == "__main__":
     if result:
         print(f"Min: {result[0]: 3}, Max: {result[1]}")
     else:
-        print("min_max() not yet implemented")
+        print(min_max())
 
     print('\n# min_max example 2')
     arr = StaticArray(1)
@@ -463,7 +464,7 @@ if __name__ == "__main__":
     if result:
         print(f"Min: {result[0]}, Max: {result[1]}")
     else:
-        print("min_max() not yet implemented")
+        print(min_max())
 
     print('\n# min_max example 3')
     test_cases = (
@@ -480,7 +481,7 @@ if __name__ == "__main__":
         if result:
             print(f"Min: {result[0]: 3}, Max: {result[1]}")
         else:
-            print("min_max() not yet implemented")
+            print(min_max())
 
     print('\n# fizz_buzz example 1')
     source = [_ for _ in range(-5, 20, 4)]
@@ -564,7 +565,7 @@ if __name__ == "__main__":
         if result:
             print(f"{arr}\nMode: {result[0]}, Frequency: {result[1]}\n")
         else:
-            print("find_mode() not yet implemented\n")
+            print(find_mode())
 
     print('# remove_duplicates example 1')
     test_cases = (
