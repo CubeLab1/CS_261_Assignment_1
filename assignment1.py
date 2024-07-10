@@ -258,7 +258,7 @@ def count_sort(arr: StaticArray) -> StaticArray:
 
     # Populate the count array
     for i in range(arr.length()):
-        count_arr[arr[i] - min_val] += 1
+        count_arr[arr[i] - min_val] = count_arr[arr[i] - min_val] + 1
 
     # Create the output array
     output_arr = StaticArray(arr.length())
@@ -269,7 +269,7 @@ def count_sort(arr: StaticArray) -> StaticArray:
         while count_arr[i] > 0:
             output_arr[current_index] = i + min_val
             current_index += 1
-            count_arr[i] -= 1
+            count_arr[i] = count_arr[i] - 1
 
     return output_arr
 
