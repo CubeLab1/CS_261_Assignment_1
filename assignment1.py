@@ -261,7 +261,7 @@ def count_sort(arr: StaticArray) -> StaticArray:
         count_arr[arr[i] - min_val] += 1
 
     # Create the output array
-    output_arr = StaticArray(arr.length())
+    output_arr = StaticArray([0] * arr.length())
     current_index = 0
 
     # Populate the output array in non-ascending order
