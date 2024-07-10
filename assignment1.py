@@ -137,16 +137,6 @@ pass
 
 
 # ------------------- PROBLEM 6 - IS_SORTED ---------------------------------
-class StaticArray:
-    def __init__(self, elements):
-        self.elements = elements
-
-    def length(self):
-        return len(self.elements)
-
-    def __getitem__(self, index):
-        return self.elements[index]
-
 def is_sorted(arr: StaticArray) -> int:
     """
     This function receives a StaticArray and returns:
