@@ -137,32 +137,26 @@ pass
 
 
 # ------------------- PROBLEM 6 - IS_SORTED ---------------------------------
-def is_sorted(arr: StaticArray) -> int:
-    """
-    This function receives a StaticArray and returns:
-    1 if the array is sorted in strictly ascending order.
-    -1 if the array is sorted in strictly descending order.
-    0 otherwise.
-    """
-    n = arr.length()
-
-    if n == 1:
+def is_sorted(arr):
+    if len(arr) == 1:
         return 1
 
     ascending = True
     descending = True
 
-    for i in range(1, n):
+    for i in range(1, len(arr)):
         if arr[i] > arr[i - 1]:
             descending = False
-        if arr[i] < arr[i - 1]:
+        elif arr[i] < arr[i - 1]:
             ascending = False
 
     if ascending:
         return 1
-    if descending:
+    elif descending:
         return -1
-    return 0
+    else:
+        return 0
+
 
 
 pass
