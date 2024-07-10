@@ -247,9 +247,13 @@ def count_sort(arr: StaticArray) -> StaticArray:
         if arr[i] > max_val:
             max_val = arr[i]
 
-    # Create the count array
+    # Create the count array using StaticArray
     range_size = max_val - min_val + 1
-    count_array = [0] * range_size
+    count_array = StaticArray(range_size)
+
+    # Initialize the count array with zeros
+    for i in range(count_array.length()):
+        count_array[i] = 0
 
     # Count the occurrences of each element in the original array
     for i in range(arr.length()):
@@ -258,7 +262,7 @@ def count_sort(arr: StaticArray) -> StaticArray:
     # Create the sorted array in non-ascending order
     sorted_array = StaticArray(arr.length())
     index = 0
-    for i in range(len(count_array) - 1, -1, -1):
+    for i in range(count_array.length() - 1, -1, -1):
         while count_array[i] > 0:
             sorted_array[index] = i + min_val
             index += 1
