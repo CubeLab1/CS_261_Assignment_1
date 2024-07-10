@@ -153,9 +153,9 @@ def is_sorted(arr: StaticArray) -> int:
     descending = True
 
     for i in range(1, n):
-        if arr[i] > arr[i - 1]:
+        if arr[i] >= arr[i - 1]:
             descending = False
-        if arr[i] < arr[i - 1]:
+        if arr[i] <= arr[i - 1]:
             ascending = False
 
     if ascending:
