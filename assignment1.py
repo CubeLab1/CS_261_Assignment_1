@@ -238,7 +238,7 @@ def remove_duplicates(arr: StaticArray) -> StaticArray:
 
 
 # ------------------- PROBLEM 9 - COUNT_SORT --------------------------------
-def count_sort_descending(arr: StaticArray) -> StaticArray:
+def count_sort(arr: StaticArray) -> StaticArray:
     # Find the minimum and maximum elements in the array
     min_val, max_val = arr[0], arr[0]
     for i in range(1, arr.length()):
