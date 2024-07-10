@@ -238,14 +238,9 @@ def remove_duplicates(arr: StaticArray) -> StaticArray:
 
 
 # ------------------- PROBLEM 9 - COUNT_SORT --------------------------------
-def count_sort(arr: StaticArray) -> StaticArray:
-    """
-    This function receives a StaticArray and returns a new StaticArray with the same content
-    sorted in non-ascending order using the count sort algorithm. The original array is not modified.
-    """
-    # Determine the range of the input values
-    min_val = arr[0]
-    max_val = arr[0]
+def count_sort_descending(arr: StaticArray) -> StaticArray:
+    # Find the minimum and maximum elements in the array
+    min_val, max_val = arr[0], arr[0]
     for i in range(1, arr.length()):
         if arr[i] < min_val:
             min_val = arr[i]
@@ -253,26 +248,23 @@ def count_sort(arr: StaticArray) -> StaticArray:
             max_val = arr[i]
 
     # Create the count array
-    range_of_values = max_val - min_val + 1
-    count_arr = StaticArray(range_of_values)
+    range_size = max_val - min_val + 1
+    count_array = [0] * range_size
 
-    # Populate the count array
+    # Count the occurrences of each element in the original array
     for i in range(arr.length()):
-        current_count = count_arr[arr[i] - min_val]
-        count_arr[arr[i] - min_val] = current_count + 1
+        count_array[arr[i] - min_val] += 1
 
-    # Create the output array
-    output_arr = StaticArray(arr.length())
-    current_index = 0
+    # Create the sorted array in non-ascending order
+    sorted_array = StaticArray(arr.length())
+    index = 0
+    for i in range(len(count_array) - 1, -1, -1):
+        while count_array[i] > 0:
+            sorted_array[index] = i + min_val
+            index += 1
+            count_array[i] -= 1
 
-    # Populate the output array in non-ascending order
-    for i in range(range_of_values - 1, -1, -1):
-        while count_arr[i] > 0:
-            output_arr[current_index] = i + min_val
-            current_index += 1
-            count_arr[i] -= 1
-
-    return output_arr
+    return sorted_array
 
     pass
 
